@@ -1,8 +1,8 @@
 <header>
   <nav>
         <ul class="menu">
-          <li class="main"><a href="/">≡</a>
-          <ul>
+          <li class="dropdown"><a href="#">≡</a>
+           <ul class="dropdown__menu" id="sweets-dropdown">
               <li class="tag"><a title="Everything" href="/">Everything</a></li>
               {{ range .Site.Taxonomies.categories }}
               <li class="tag"><a title="{{ .Page.Title }}" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
