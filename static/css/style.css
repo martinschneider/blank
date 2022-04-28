@@ -1,0 +1,171 @@
+/* latin-ext */
+@font-face{
+  font-family: 'text';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/zillaslab/v6/dFa5ZfeM_74wlPZtksIFYpEY6H2pW2hz.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face{
+  font-family: 'text';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/zillaslab/v6/dFa5ZfeM_74wlPZtksIFYpEY6HOpWw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* chinese */
+@font-face{
+  font-family: 'text';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/cwTeXQFangsongZH-Medium-subset.woff2);
+  unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
+}
+
+body {
+  font-family: text;
+  margin: 0;
+  background: black;
+}
+
+body.page {
+  background: white
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+body>footer p, body>footer a {
+  text-align: center;
+  color: lightgrey;
+}
+
+body.page>footer p, body>footer a {
+  text-align: center;
+  color: darkgrey;
+}
+
+a.tile {
+  font-size: 1.5em;
+  color: black;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 25px;
+  padding: 25px 25px 25px 25px;
+}
+
+.grid .post {
+  filter: grayscale(0) brightness(0.85);
+}
+
+.grid .post:hover {
+  filter: grayscale(0) brightness(1.1);
+}
+
+.post {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.post span {
+  text-align: center;
+  background-color: white;
+  padding: 2px 10px;
+}
+
+article {
+  margin-left: 100px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+nav ul {
+ list-style: none; 
+ padding:0;
+ margin: 0;
+ position: absolute;
+ background: white;
+ z-index: 999
+}
+
+nav ul.menu {
+  top: 0;
+  left: 0;
+}
+
+nav ul li {
+ display: block;
+ padding: 0;
+ margin: 0;
+ cursor: pointer;
+}
+
+nav li.main {
+ font-size: 64pt;
+ border: 2px solid black;
+ top: 100px;
+}
+
+nav li ul {
+ display: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+nav ul li ul li a {
+ display: block;
+ font-size:20px;
+ padding: 10px;
+ text-decoration: none;
+ color: black;
+ width:100px; 
+ border: 2px solid black;
+ margin: -2px;
+}
+
+nav ul li a:hover {
+ background: deepskyblue;
+ color: white;
+}
+
+nav li:hover ul {
+ display: block; 
+ position: absolute; 
+}
+
+nav li:hover li {
+ float: none; 
+}
+
+nav li:hover a {
+ background-color:white; 
+ color:black;
+}
+
+nav li:hover li a:hover {
+ width:100px;
+}

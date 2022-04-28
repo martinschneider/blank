@@ -1,12 +1,13 @@
 <header>
-	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-	{{ with .Site.Menus.main }}
-	<nav>
-		<ul>
-			{{ range . }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-			{{ end }}
-		</ul>
-	</nav>
-	{{ end }}
-</header>
+  <nav>
+        <ul class="menu">
+          <li class="main"><a href="/">≡</a>
+          <ul>
+              <li class="tag"><a title="Everything" href="/">Everything</a></li>
+              {{ range .Site.Taxonomies.categories }}
+              <li class="tag"><a title="{{ .Page.Title }}" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+              {{ end }}
+          </ul></li>
+        </ul>
+    </nav>
+    </header>
