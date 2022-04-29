@@ -2,11 +2,11 @@
   <nav>
      <div class="left">
      {{ if .IsPage }}{{ with .PrevInSection }}
-     <a href="{{ .Permalink }}">🠔 {{ .Title }}</a>
+     <a href="{{ .Permalink }}" title="Previous post: {{ .Title }}"><</a>
      {{ end }}{{ end }}
      </div>
         <ul class="menu">
-          <li class="dropdown"><a class="top" href="#">≡</a>
+          <li class="dropdown"><a class="top" href="/">{{ $.Site.Title }}</a>
            <ul class="dropdown__menu" id="sweets-dropdown">
               <li class="tag"><a title="Everything" href="/">Everything</a></li>
               {{ range .Site.Taxonomies.categories }}
@@ -16,7 +16,7 @@
         </ul>
         <div class="right">
           {{ with .NextInSection }}
-          <a href="{{ .Permalink }}">{{ .Title }} 🠖</a>
+          <a href="{{ .Permalink }}" title="Next post: {{ .Title }}">></a>
           {{ end }}
         </div>
     </nav>
