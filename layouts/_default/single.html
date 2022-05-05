@@ -1,8 +1,10 @@
 {{ define "main" }}
 	<main>
 		<article>
-			<h1>{{ .Title }}</h1>
-			<h2>{{ .Date.Format "02.01.2006" }}</h2>
+			<div class="header">
+			  <div class="pull-left"><h1>{{ .Title }}</h1></div>
+			  <div class="pull-right">{{ .Date.Format "02.01.2006" }}</div>
+			</div>
 			<div>
 				{{ .Content }}
 			</div>

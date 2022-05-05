@@ -175,12 +175,23 @@ body.page {
   background: white
 }
 
-h1 {
-  font-size: 2.5em;
+.header {
+  display: table;
+  width: 100%;
 }
 
-h2 {
-  font-size: 1.5em;
+.pull-left {
+  display: table-cell;
+}
+
+.pull-right {
+  display: table-cell;
+  float: right;
+  text-align: right;
+}
+
+h1 {
+  font-size: 2em;
 }
 
 p {
