@@ -7,4 +7,39 @@
          {{ end }}
     {{ end }}
     {{ end }}
-    /><span>{{ .Title }}</span></div></a>
+    /><span>{{ .Title }}</span>
+    <div class="bottomright">
+      {{ $cat := .Params.categories }}
+      {{ with (in $cat "Taiwan") }}
+      🇹🇼
+      {{ end }}
+      {{ with (in $cat "Singapore") }}
+      🇸🇬
+      {{ end }}
+      {{ with (in $cat "Austria") }}
+      🇦🇹
+      {{ end }}
+      {{ with (in $cat "Hungary") }}
+      🇭🇺
+      {{ end }}
+      {{ with (in $cat "United States") }}
+      🇺🇸
+      {{ end }}
+      {{ with (in $cat "Iran") }}
+      🇮🇷
+      {{ end }}
+      {{ with (in $cat "Myanmar") }}
+      🇲🇲
+      {{ end }}
+      {{ with (in $cat "Philippines") }}
+      🇵🇭
+      {{ end }}
+      {{ with (in $cat "North Korea") }}
+      🇰🇵
+      {{ end }}
+      {{ with (in $cat "Laos") }}
+      🇱🇦
+      {{ end }}
+      </div>
+  </div>
+</a>

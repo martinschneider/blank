@@ -1,6 +1,15 @@
 * {
   box-sizing: border-box;
 }
+
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 32px;
+  filter: grayscale(0.2) brightness(0.9);
+}
+
 .dropdown__title {
   background-color: transparent;
   border: none;

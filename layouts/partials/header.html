@@ -9,10 +9,14 @@
           <li class="dropdown"><a class="top" href="#">{{ $.Site.Title }}</a>
            <ul class="dropdown__menu" id="sweets-dropdown">
               <li class="tag"><a title="Everything" href="/">Everything</a></li>
+              {{ $whitelist := .Site.Params.menuCategories }}
               {{ range .Site.Taxonomies.categories }}
+              {{ if (in $whitelist .Page.Title) }}
               <li class="tag"><a title="{{ .Page.Title }}" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
               {{ end }}
-          </ul></li>
+              {{ end }}
+            </ul>
+          </li>
         </ul>
         <div class="right">
           {{ with .NextInSection }}
